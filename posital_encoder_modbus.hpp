@@ -36,7 +36,7 @@ namespace posital_encoder_modbus
 
   public:
     PositalEncoderModbus();
-    PositalEncoderModbus(std::string device, int baud, char parity, int data_bit, int stop_bit);
+    PositalEncoderModbus(std::string device, int baud, char parity, int data_bit, int stop_bit, int debug);
     void read_data(float &speed, bool &speed_fail_status, float &pose, bool &pose_fail_status);
     void read_data();
     bool init_encoder_motor(int slave_id, int speed_mode_value, int speed_filter_value);
